@@ -6,6 +6,8 @@
         <option value="Goodbye">Goodbye</option>
         <option value="Chao">Chao</option>
     </select>
+
+    <button wire:click='resetName'>Reset Name</button>
     
     <h1>{{ $greeting }} {{ $name }} @if ($loud) ! @endif</h1>
 </div>
