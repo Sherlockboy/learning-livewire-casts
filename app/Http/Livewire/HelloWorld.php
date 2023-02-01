@@ -8,11 +8,13 @@ class HelloWorld extends Component
 {
     public $names = ['Sherlock', 'John', 'Suzan'];
 
-    public function removeName($name)
+    protected $listeners = [
+        'refreshParent' => '$refresh'
+    ];
+
+    public function refreshChildren()
     {
-        $this->names = collect($this->names)
-            ->reject(fn ($value) => $value == $name)
-            ->all();
+        $this->emit('refreshChildren');
     }
 
     public function render()

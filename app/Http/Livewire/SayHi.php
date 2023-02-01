@@ -8,6 +8,15 @@ class SayHi extends Component
 {
     public $name;
 
+    protected $listeners = [
+        'refreshChildren' => 'refreshMe',
+    ];
+
+    public function refreshMe()
+    {
+        info('Refreshed');
+    }
+
     public function mount($name)
     {
         $this->name = $name;
