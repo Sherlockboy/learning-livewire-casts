@@ -6,7 +6,8 @@
         @livewireStyles()
     </head>
     <body>
-        @livewire('hello-world')
+        @livewire('hello-world', ['name' => 'Bob'])
+        
         @livewireScripts()
     </body>
 </html>
